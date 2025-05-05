@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+html {
+    overflow: hidden !important;
+    background-color: rgba(28, 229, 255, 0.068);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.container {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .container {
+        width: 70%;
+    }
+}
