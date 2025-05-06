@@ -20,7 +20,13 @@ const Project = () => {
         {
           ProjectList?.map((item)=>(
             <a href={item.link} target='_blank' key={item.id} className='w-60 h-36 relative flex flex-col items-center justify-center rounded-xl overflow-hidden'>
-              <img src={item.image} alt={item.title} className='w-full h-full object-cover' />
+              <img
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
               <div className="bg-blue-300 w-full h-full flex items-center justify-center absolute top-0 left-0 opacity-0 hover:opacity-100 transition-all duration-300">
                 <h1 className='font-medium text-white'>Visit Website</h1>
               </div>
