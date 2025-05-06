@@ -8,7 +8,7 @@ const Social = () => {
   return (
     <div className="container flex items-center justify-between max-sm:justify-center bg-white max-md:my-3 my-5 rounded-full shadow-md shadow-[#00000013] px-10 p-4">
       <div className="flex items-center justify-between max-sm:hidden">
-        <p className="font-medium text-gray-800">
+        <p className="text-sm text-gray-800">
           © {year} All rights reserved
         </p>
       </div>

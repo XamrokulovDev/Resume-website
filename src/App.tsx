@@ -8,6 +8,8 @@ const Home = React.lazy(()=> import("./pages"));
 const Experience = React.lazy(()=> import("./pages/experience"));
 const Skill = React.lazy(()=> import("./pages/skills"));
 const Project = React.lazy(()=> import("./pages/projects"));
+// particles 
+const ParticlesBg = React.lazy(()=> import("particles-bg"))
 
 const App = () => {
   const router = createBrowserRouter([
@@ -35,7 +37,10 @@ const App = () => {
     }
   ]);
   return (
-    <RouterProvider router={router} />
+    <>
+      <ParticlesBg type="cobweb" bg={true} num={150} />
+      <RouterProvider router={router} />
+    </>
   )
 }
 
