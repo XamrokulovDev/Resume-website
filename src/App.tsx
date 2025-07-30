@@ -5,9 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const Routerlayout = React.lazy(()=> import("./layout"));
 // import pages 
 const Home = React.lazy(()=> import("./pages"));
-const Experience = React.lazy(()=> import("./pages/experience"));
-const Skill = React.lazy(()=> import("./pages/skills"));
-const Project = React.lazy(()=> import("./pages/projects"));
+
 // particles 
 const ParticlesBg = React.lazy(()=> import("particles-bg"))
 
@@ -18,27 +16,20 @@ const App = () => {
       element: <Routerlayout />,
       children: [
         {
-          index: true,
+          path:"*",
           element: <Home />
         },
         {
-          path: "/experience",
-          element: <Experience />
+          index: true,
+          element: <Home />
         },
-        {
-          path: "/skill",
-          element: <Skill />
-        },
-        {
-          path: "/project",
-          element: <Project />
-        }
+
       ]
     }
   ]);
   return (
     <>
-      <ParticlesBg type="cobweb" bg={true} num={150} />
+      <ParticlesBg type="cobweb" bg={true} num={150} color="#3B82F6" />
       <RouterProvider router={router} />
     </>
   )

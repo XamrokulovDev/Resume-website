@@ -10,6 +10,10 @@ html {
     background: transparent;
 }
 
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
 .container {
     width: 55%;
     margin-left: auto;
